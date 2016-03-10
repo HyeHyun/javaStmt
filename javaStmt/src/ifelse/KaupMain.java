@@ -32,6 +32,7 @@ public class KaupMain {
 		k.setHeight(scanner.nextDouble());
 		k.setWeight(scanner.nextDouble());
 
+		
 		k.setResult();
 		name = k.getName();
 		result = k.getResult();
