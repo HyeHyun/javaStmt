@@ -23,7 +23,6 @@ import java.util.*;
 public class KaupMain {
 	public static void main(String[] args) {
 		// 지역변수 영역
-		String result = "", name = ""; // "" 리터럴이라고 명명하겠음
 		Scanner scanner = new Scanner(System.in);
 		Kaup k = new Kaup();
 		
@@ -31,12 +30,8 @@ public class KaupMain {
 		k.setName(scanner.next());
 		k.setHeight(scanner.nextDouble());
 		k.setWeight(scanner.nextDouble());
-
-		
 		k.setResult();
-		name = k.getName();
-		result = k.getResult();
-
-		System.out.println(name + "님은 " + result + "입니다.");
+		
+		System.out.println(k.toString());
 	}
 }

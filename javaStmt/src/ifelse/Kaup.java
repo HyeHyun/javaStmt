@@ -3,8 +3,6 @@ package ifelse;
 public class Kaup {
 	// 속성영역 : field;
 	private String name;
-
-
 	private int kaup;
 	private double height, weight;
 	private String result;
@@ -47,6 +45,7 @@ public class Kaup {
 	}
 
 	public void setResult() {
+		setKaup();
 		String temp = "";
 		
 		if (kaup > 30) {
@@ -66,5 +65,10 @@ public class Kaup {
 		}
 		
 		this.result = temp;
+	}
+
+	@Override
+	public String toString() {
+		return "카우푸지수 [이름=" + name + ", 결과=" + result + "]";
 	}
 }
