@@ -21,10 +21,11 @@ public class InputGugudan {
 
 		if (dan <= 0) {
 			System.out.println("1이상 정수값만 입력하시오");
-		} else {
-			for (i = 1; i <= 9; i++) {
-				System.out.println(dan + "*" + i + " = " + dan * i);
-			}
+			return; // 이 메소드를 종료시켜라
+		}
+
+		for (i = 1; i <= 9; i++) {
+			System.out.println(dan + "*" + i + " = " + dan * i);
 		}
 	}
 }

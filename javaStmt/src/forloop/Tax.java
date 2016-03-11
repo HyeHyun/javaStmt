@@ -22,6 +22,6 @@ public class Tax {
 		name = scanner.next();
 		salary = scanner.nextInt();
 		
-		System.out.println("연봉 "+salary+"만원을 받으시는 "+name+"님께서 이번달 납부할 세금은 "+(int) (salary*0.1)+"만원 입니다.");
+		System.out.println("연봉 "+salary+"만원을 받으시는 "+name+"님께서 이번달 납부할 세금은 "+(int) (salary*0.1/12)+"만원 입니다.");
 	}
 }

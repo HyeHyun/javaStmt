@@ -29,6 +29,11 @@ public class FactorOf5 {
 			}
 		}
 
+/*		for (int i = 0; i <= endNum; i += 5) {
+			count++;
+			sum += i;
+		}*/
+
 		System.out.println("1에서 " + endNum + "까지 정수까지 5 배수의 갯수는 " + count + "이고 5 배수의 합은 " + sum + " 이다.");
 	}
 }
