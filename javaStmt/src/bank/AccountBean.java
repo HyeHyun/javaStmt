@@ -15,8 +15,10 @@ public class AccountBean {
 	 * 다만, 잔액은 통장이 만들어진 이후에 입금이 되겠지요.
 	 * */
 
+	public AccountBean() {} // 지역변수 용도로 사용하기 위해 오버로딩
+	
 	public AccountBean(String name, int password) {
-		this.accountNo = (int) (Math.random() * 10) + 1;
+		this.accountNo = (int) (Math.random() * 100000) + 100000;
 		this.name = name;
 		setPassword(password);
 		this.money = 0;
@@ -48,10 +50,6 @@ public class AccountBean {
 	
 	@Override
 	public String toString() {
-		return BANK_NAME + " 한빛통장 [계좌번호=" + accountNo 
-				+ ", 계좌명=" + name 
-				+ ", 비밀번호=" + password 
-				+ ", 잔액=" + money
-				+ "]";
+		return BANK_NAME + " 한빛통장 [계좌번호=" + accountNo + ", 계좌명=" + name + ", 비밀번호=" + password + ", 잔액=" + money + "]";
 	}
 }
