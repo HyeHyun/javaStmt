@@ -1,6 +1,8 @@
 package ifelse;
 
- /**
+import java.util.Scanner;
+
+/**
  * @file : Pass.java
  * @author KIM HYEHYEON
  * @date 2016. 3. 11.
@@ -16,6 +18,10 @@ package ifelse;
  */
 public class Pass {
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("이름, 자바, JSP, SQL, 스프링 점수 입력 : ");
+		String name = scanner.next();
+		int java = scanner.nextInt(), jsp = scanner.nextInt(), sql = scanner.nextInt(), spring = scanner.nextInt();
 		
 	}
 }
