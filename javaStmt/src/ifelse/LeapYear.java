@@ -24,11 +24,13 @@ public class LeapYear {
 	public static String yearStr(int year) {
 		String yearStr = "";
 		
-		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+/*		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
 			yearStr = "윤년";
 		} else {
 			yearStr = "평년";
-		}
+		}*/
+		
+		yearStr = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)? "윤년" : "평년";
 		
 		return yearStr;
 	}

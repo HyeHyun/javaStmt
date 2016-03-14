@@ -40,7 +40,7 @@ public class NumGolfBean {
 	public void setFlag(boolean flag) {
 		this.flag = flag;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "결과 [플레이어 값=" + player + ", 컴퓨터 값=" + com + ", 시도한 횟수=" + count + ", 일치여부=" + flag + "]";

@@ -17,18 +17,29 @@ public class NumGolfMain {
 		bean.setCom();
 
 		while (true) {
-			System.out.print("1부터 10까지 숫자 중 하나를 입력하세요 ");
-			bean.setPlayer(scanner.nextInt());
-			bean.setCount();
-
-			if (bean.getCom() == bean.getPlayer()) {
-				bean.setFlag(true);
-			} else {
-				bean.setFlag(false);
+			System.out.print("[메뉴] 1.숫자 맞추기\t2.종료 ");
+			int key = scanner.nextInt();
+			
+			switch (key) {
+			case 1: 
+				System.out.print("1부터 10까지 숫자 중 하나를 입력하세요 ");
+				bean.setPlayer(scanner.nextInt());
+				bean.setCount();
+				boolean result;
+				
+				result = (bean.getCom() == bean.getPlayer()) ? true : false;
+				bean.setFlag(result);
+				
+				System.out.println(bean.toString());
+				break;
+			case 2:
+				System.out.println("종료합니다.");
+				return;
+			default:
+				System.out.println("잘못된 값");
+				break;
 			}
-
-			System.out.println(bean.toString());
-
+			
 			if (bean.isFlag()) {
 				break;
 			}
