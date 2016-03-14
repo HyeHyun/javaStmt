@@ -25,10 +25,7 @@ public class NumGolfMain {
 				System.out.print("1부터 10까지 숫자 중 하나를 입력하세요 ");
 				bean.setPlayer(scanner.nextInt());
 				bean.setCount();
-				boolean result;
-				
-				result = (bean.getCom() == bean.getPlayer()) ? true : false;
-				bean.setFlag(result);
+				bean.setFlag();
 				
 				System.out.println(bean.toString());
 				break;
