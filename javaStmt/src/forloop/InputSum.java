@@ -1,26 +1,23 @@
 package forloop;
 
-import java.util.Scanner;
-
-/**
- * @file : InputSum.java
- * @author KIM HYEHYEON
- * @date 2016. 3. 11.
- * @story 1부터 입력된 수까지의 정수의 합 구하기
- * 예) 10을 입력하면 콘솔에는 1부터 10까지의 합은 55입니다.
- */
 public class InputSum {
-	public static void main(String[] args) {
-		int sum = 0, endNum = 0, i;
-		Scanner scanner = new Scanner(System.in);
+	private int endNum, sum = 0, i;
 
-		System.out.print("1부터 입력된 수까지의 정수의 합 구하기. 리미트값을 입력하세요 ");
-		endNum = scanner.nextInt();
+	public void setEndNum(int endNum) {
+		this.endNum = endNum;
+		setSum();
+	}
 
+	public void setSum() {
 		for (i = 1; i <= endNum; i++) {
 			sum += i;
 		}
+		
+		this.sum = sum;
+	}
 
-		System.out.println("1부터 " + endNum + "까지의 합은 " + sum + "입니다.");
+	@Override
+	public String toString() {
+		return "InputSum [1부터 " + endNum + "까지의 합=" + sum + "]";
 	}
 }
