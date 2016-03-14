@@ -26,7 +26,7 @@ public class KaupMain {
 		Scanner scanner = new Scanner(System.in);
 		Kaup k = new Kaup();
 		
-		System.out.print("이름, 키, 몸무게 : ");
+		System.out.print("이름, 키, 몸무게를 입력하세요 ");
 		k.setName(scanner.next());
 		k.setHeight(scanner.nextDouble());
 		k.setWeight(scanner.nextDouble());

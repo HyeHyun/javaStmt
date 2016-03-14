@@ -14,7 +14,7 @@ public class InputSum {
 		int sum = 0, endNum = 0, i;
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.print("1부터 입력된 수까지의 정수의 합 구하기. 리미트값 입력 : ");
+		System.out.print("1부터 입력된 수까지의 정수의 합 구하기. 리미트값을 입력하세요 ");
 		endNum = scanner.nextInt();
 
 		for (i = 1; i <= endNum; i++) {

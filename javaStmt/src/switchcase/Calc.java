@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Calc {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("숫자, 연산기호, 숫자 입력 : ");
+		System.out.print("숫자, 연산기호, 숫자를 입력하세요 ");
 		int a = scanner.nextInt();
 		String opcode = scanner.next();
 		// + - * / 단, 나눗셈은 몫과 나머지로 출력

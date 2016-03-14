@@ -15,8 +15,13 @@ import java.util.Scanner;
 public class LeapYear {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("판별하려는 년도를 입력 : ");
+		System.out.print("판별하려는 년도를 입력하세요 ");
 		int year = scanner.nextInt();
+	
+		System.out.println(year + "년은 " + yearStr(year) + "입니다.");
+	}
+	
+	public static String yearStr(int year) {
 		String yearStr = "";
 		
 		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
@@ -25,6 +30,6 @@ public class LeapYear {
 			yearStr = "평년";
 		}
 		
-		System.out.println(year + "는 " + yearStr + "입니다.");
+		return yearStr;
 	}
 }

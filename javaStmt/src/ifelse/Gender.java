@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Gender {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("이름, 주민번호를 입력하세요");
+		System.out.print("이름, 주민번호를 입력하세요 ");
 		String name = scanner.next(), ssn = scanner.next(), result = "";
 		char flag = ssn.charAt(7);
 		/**
@@ -32,7 +32,6 @@ public class Gender {
 			result = "외국인";
 		} else {
 			result = "잘못된 주민번호입니다.";
-			
 		}
 		
 		System.out.println(name + "은 " + result + "입니다.");

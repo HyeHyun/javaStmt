@@ -11,9 +11,8 @@ import java.util.Scanner;
 public class BigNumber {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("3개의 숫자를 입력하세요 ");
-		int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt();
-		int big = a;
+		System.out.print("3개의 숫자를 입력하세요 ");
+		int a = scanner.nextInt(), b = scanner.nextInt(), c = scanner.nextInt(), big = a;
 		
 		if (big < b) {
 			big = b;

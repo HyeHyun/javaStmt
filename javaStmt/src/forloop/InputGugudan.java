@@ -16,7 +16,7 @@ public class InputGugudan {
 		int dan, i;
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.print("입력받은 정수의 구구단 구하기. 단 입력 : ");
+		System.out.print("입력받은 정수의 구구단 구하기. 단을 입력하세요  ");
 		dan = scanner.nextInt();
 
 		if (dan <= 0) {

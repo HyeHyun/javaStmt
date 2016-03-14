@@ -47,7 +47,7 @@ public class AccountBean {
 	public void setMoney(int money) {
 		this.money = money;
 	}
-	
+
 	@Override
 	public String toString() {
 		return BANK_NAME + " 한빛통장 [계좌번호=" + accountNo + ", 계좌명=" + name + ", 비밀번호=" + password + ", 잔액=" + money + "]";

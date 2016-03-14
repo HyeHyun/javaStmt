@@ -8,11 +8,11 @@ import java.util.Scanner;
  * @date 2016. 3. 11.
  * @story 성적표(점수에 따라 A ~ F까지 학점부여)
  * [결과]
- * ******************************
- * *이름	과목	점수	학점*
- * *----------------------------*
- * *홍길동	영어	89		B	*
- * ******************************
+ * *************************
+ * *이름		과목	점수	학점
+ * *------------------------
+ * *홍길동	영어	89	B	
+ * *************************
  * 90 점 이상 A
  * 80 점 이상 B
  * 70 점 이상 C
@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class GradeReport {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("이름, 점수 입력 : ");
+		System.out.print("이름과 점수를 입력하세요 ");
 		String name = scanner.next();
 		int score = scanner.nextInt();
 		String result = "";
