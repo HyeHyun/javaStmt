@@ -71,9 +71,9 @@ public class GradeServiceImpl implements GradeService {
 		// 성적표 수정
 		String temp = "";
 		
-		if (grade.getName().equals(null)) {
-			temp = "수정 실패";
-		} else {
+//		if (grade.getName() == null) {
+//			temp = "수정 실패";
+//		} else {
 			GradeBean searchedGrade = getGradeByHak(grade.getHak());
 			searchedGrade.setJava(grade.getJava());
 			searchedGrade.setSql(grade.getSql());
@@ -81,7 +81,7 @@ public class GradeServiceImpl implements GradeService {
 			searchedGrade.setSpring(grade.getSpring());
 			
 			temp = "수정 성공";
-		}
+//		}
 		
 /*		delete(grade.getHak());
 		input(grade);*/

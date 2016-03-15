@@ -72,14 +72,6 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public int countByName(String name) {
 		// 해당 이름에 맞는 계좌 수 조회
-		Vector<AccountBean> tempList = new Vector<AccountBean>();
-		
-		for (int i = 0; i < accountList.size(); i++) {
-			if (accountList.get(i).getName().equals(name)) {
-				tempList.add(accountList.get(i));
-			}
-		}
-		
-		return tempList.size();
+		return findAccountsByName(name).size();
 	}
 }

@@ -18,8 +18,14 @@ public class GradeController {
 			case 2:
 				System.out.print("수정하려는 성적표의 학번, 자바, SQL, JSP, 스프링의 점수를 입력하세요 ");
 				int hak = scanner.nextInt();
-
-//			System.out.println(service.update(new GradeBean(hak, service.getGradeByHak(hak).getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
+				GradeBean temp2 = service.getGradeByHak(hak);
+				System.out.println(" >>> " + temp2);
+				
+				if (temp2 == null) {
+					System.out.println("수정 실패");
+				} else {
+					System.out.println(service.update(new GradeBean(hak, temp2.getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
+				}
 				
 //				if (service.getGradeByHak(hak) != null) {
 //					System.out.println(service.update(new GradeBean(hak, service.getGradeByHak(hak).getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
