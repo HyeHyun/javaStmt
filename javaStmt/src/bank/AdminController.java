@@ -27,8 +27,11 @@ public class AdminController {
 				System.out.println(service.findAccountsByName(scanner.next()));
 				break;
 			case 5:
+				System.out.println(service.countAll());
 				break;
 			case 6:
+				System.out.print("계좌번호를 입력하세요 ");
+				service.closeAccount(scanner.nextInt());
 				break;
 			case 0:
 				System.out.println("프로그램 종료");

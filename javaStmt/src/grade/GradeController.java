@@ -1,6 +1,6 @@
 package grade;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class GradeController {
 	public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class GradeController {
 		GradeServiceImpl service = new GradeServiceImpl();
 		
 		while (true) {
-			System.out.print("[메뉴] 1.등록 2.수정 3.삭제 4.조회(전체) 5.조회(이름) 6.조회(학번) 7.회원수 0.종료");
+			System.out.print("[메뉴] 1.등록 2.수정 3.삭제 4.조회(전체) 5.조회(이름) 6.조회(학번) 7.회원수 0.종료 ");
 			
 			switch (scanner.nextInt()) {
 			case 1:
@@ -16,22 +16,36 @@ public class GradeController {
 				service.input(new GradeBean(scanner.nextInt(), scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
 				break;
 			case 2:
-				service.update();
+				System.out.print("수정하려는 성적표의 학번, 자바, SQL, JSP, 스프링의 점수를 입력하세요 ");
+				int hak = scanner.nextInt();
+
+//			System.out.println(service.update(new GradeBean(hak, service.getGradeByHak(hak).getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
+				
+//				if (service.getGradeByHak(hak) != null) {
+//					System.out.println(service.update(new GradeBean(hak, service.getGradeByHak(hak).getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
+//				} else {
+//					System.out.println("수정 실패");
+//				}
 				break;
 			case 3:
-				service.delete();
+				System.out.print("학번을 입력하세요 ");
+				System.out.println(service.delete(scanner.nextInt()));
 				break;
 			case 4:
 				System.out.println(service.getList());
 				break;
 			case 5:
-				service.getGradesByName();
+				System.out.print("이름을 입력하세요 ");
+				ArrayList<GradeBean> tempList = service.getGradesByName(scanner.next());
+				System.out.println((tempList.size() != 0) ? tempList : "조회하려는 이름이 없습니다.");
 				break;
 			case 6:
-				service.getGradeByHak();
+				System.out.print("학번을 입력하세요 ");
+				GradeBean temp = service.getGradeByHak(scanner.nextInt());
+				System.out.println((temp != null) ? temp : "조회하려는 학번이 없습니다.");
 				break;
 			case 7:
-				service.getCount();
+				System.out.println(service.getCount());
 				break;
 			case 0:
 				System.out.println("프로그램 종료");

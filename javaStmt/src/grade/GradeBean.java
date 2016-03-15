@@ -66,6 +66,6 @@ public class GradeBean {
 
 	@Override
 	public String toString() {
-		return "성적표 [이름=" + name + ", 학번=" + hak + ", 자바=" + java + ", SQL=" + sql + ", JSP=" + jsp + ", 스프링=" + spring + "]";
+		return "성적표 [이름=" + name + ", 학번=" + hak + ", 자바=" + java + ", SQL=" + sql + ", JSP=" + jsp + ", 스프링=" + spring + "]\n";
 	}
 }
