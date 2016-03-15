@@ -4,9 +4,12 @@ public class GradeBean {
 	private String name;
 	private int hak, java, sql, jsp, spring;
 	
-	public GradeBean(String name, int hak, int java, int sql, int jsp, int spring) {
-		this.name = name;
+	// 생성자 오버로딩
+	public GradeBean() {}
+	
+	public GradeBean( int hak, String name, int java, int sql, int jsp, int spring) {
 		this.hak = hak;
+		this.name = name;
 		this.java = java;
 		this.sql = sql;
 		this.jsp = jsp;

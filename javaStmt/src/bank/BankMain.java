@@ -7,11 +7,11 @@ public class BankMain {
 		// 지역변수 영역
 		Scanner scanner = new Scanner(System.in);
 		BankServiceImpl service = new BankServiceImpl();
-		AdminServiceImpl admin = new AdminServiceImpl(100);
+		AdminServiceImpl2 admin = new AdminServiceImpl2(100);
 		
 		// 연산영역
 		System.out.print("이름, 비밀번호 : ");		
-		System.out.println(service.openAccount(scanner.next(), scanner.nextInt()));
+		service.openAccount(scanner.next(), scanner.nextInt());
 		
 		System.out.print("입금 : ");
 		System.out.println(service.deposit(scanner.nextInt()));

@@ -1,12 +1,21 @@
 package bank;
 
+import java.util.Vector;
+
 public class BankServiceImpl implements BankService {
-	private AccountBean account;
+	AccountBean account;
+	Vector<AccountBean> accountList;
+	
+	public BankServiceImpl() {
+		accountList = new Vector<AccountBean>();
+	}
 	
 	@Override
 	public String openAccount(String name, int password) {
 		// 계좌 개설
 		account = new AccountBean(name, password);
+		accountList.add(account);
+		
 		return account.toString();
 	}
 
