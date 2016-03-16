@@ -5,7 +5,7 @@ import java.util.*;
 public class GradeController {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		GradeServiceImpl service = new GradeServiceImpl();
+		GradeService service = new GradeServiceImpl();
 		
 		while (true) {
 			System.out.print("[메뉴] 1.등록 2.수정 3.삭제 4.조회(전체) 5.조회(이름) 6.조회(학번) 7.회원수 0.종료 ");

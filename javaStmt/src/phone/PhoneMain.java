@@ -14,25 +14,26 @@ public class PhoneMain {
 	}
 
 	public void useAndroidPhone(Scanner scanner) {
-		IPhone androidPhone = new AndroidPhone();
-		androidPhone.setCompany("안드로이드");
-		System.out.println(androidPhone.getCompany() + "를 사용");
+		Phone and = new AndroidPhone();
+		and.setCompany("안드로이드");
+		System.out.println(and.getCompany() + "를 사용");
 		System.out.print("? , 메시지 ");
-		((AndroidPhone)androidPhone).setData(scanner.next(), scanner.next(), "6인치");
-		System.out.println(androidPhone.getData());
+		((AndroidPhone) and).setData(scanner.next(), scanner.next(), "6인치");
+		System.out.println(((AndroidPhone) and).getData());
 	}
 
 	public void useIphone(Scanner scanner) {
-		IPhone iPhone = new IPhone();
+		Phone iPhone = new IPhone();
 		iPhone.setCompany("애플");
 		System.out.println(iPhone.getCompany() + "을 사용");
 		System.out.print("? , 메시지 ");
-		iPhone.setData(scanner.next(), scanner.next());
-		System.out.println(iPhone.getData());
+		((IPhone) iPhone).setData(scanner.next(), scanner.next());
+		System.out.println(((AndroidPhone) iPhone).getData());
 	}
 
 	public void useNokia(Scanner scanner) {
-		Phone nokia = new CellPhone(); // 부모의 타입으로 자식의 생성자를 통해 인스턴스를 생성할 수 있다.
+		Phone nokia = new CellPhone(); // Deep Copy
+		// 부모의 타입으로 자식의 생성자를 통해 인스턴스를 생성할 수 있다.
 		nokia.setCompany("노키아");
 		System.out.println(nokia.getCompany() + "를 사용");
 		System.out.print("휴대폰으로 통화할 사람? ");
