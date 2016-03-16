@@ -5,30 +5,33 @@ import java.util.Scanner;
 public class PhoneMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		
 		System.out.println("=== 집 전화기로 통화 ===");
-//		usePhone(scanner);
-//		useNokia(scanner);	
-//		useIphone(scanner);
-		
-		AndroidPhone androidPhone = new AndroidPhone();
-		androidPhone.setCompany("LG");
-		System.out.println(androidPhone.getCompany() + "를 사용");
-		System.out.print("? , 메시지, 크기 ");
-		androidPhone.setData(scanner.next(), scanner.next(), scanner.next());
-		System.out.println(androidPhone.getCall());
+		PhoneMain pm = new PhoneMain();
+//		pm.usePhone(scanner);
+//		pm.useNokia(scanner);	
+//		pm.useIphone(scanner);
+		pm.useAndroidPhone(scanner);
 	}
 
-	public static void useIphone(Scanner scanner) {
+	public void useAndroidPhone(Scanner scanner) {
+		IPhone androidPhone = new AndroidPhone();
+		androidPhone.setCompany("안드로이드");
+		System.out.println(androidPhone.getCompany() + "를 사용");
+		System.out.print("? , 메시지 ");
+		((AndroidPhone)androidPhone).setData(scanner.next(), scanner.next(), "6인치");
+		System.out.println(androidPhone.getData());
+	}
+
+	public void useIphone(Scanner scanner) {
 		IPhone iPhone = new IPhone();
 		iPhone.setCompany("애플");
 		System.out.println(iPhone.getCompany() + "을 사용");
 		System.out.print("? , 메시지 ");
 		iPhone.setData(scanner.next(), scanner.next());
-		System.out.println(iPhone.getCall());
+		System.out.println(iPhone.getData());
 	}
 
-	public static void useNokia(Scanner scanner) {
+	public void useNokia(Scanner scanner) {
 		Phone nokia = new CellPhone(); // 부모의 타입으로 자식의 생성자를 통해 인스턴스를 생성할 수 있다.
 		nokia.setCompany("노키아");
 		System.out.println(nokia.getCompany() + "를 사용");

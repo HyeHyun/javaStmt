@@ -16,9 +16,4 @@ public class IPhone extends CellPhone {
 		super.setCall(name);
 		this.data = super.getCompany() + "\t" + super.isPortable() + "\t" + super.getCall() + "\t" + data + " : 메시지 전달";
 	}
-	
-	@Override
-	public String getCall() {
-		return this.getData();
-	}
 }

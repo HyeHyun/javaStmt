@@ -7,7 +7,7 @@ package phone;
  * @story 폰의 확장을 통해 상속의 개념을 이해해 보자
  */
 public class Phone {
-	private String company, call;
+	protected String company, call;
 
 	public String getCompany() {
 		return company;
