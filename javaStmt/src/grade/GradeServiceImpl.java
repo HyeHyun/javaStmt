@@ -53,6 +53,13 @@ public class GradeServiceImpl implements GradeService {
 
 		return tempList;
 	}
+	
+	@Override
+	public String getNameByHak(int hak) {
+		// 이름 조회(학번)
+		GradeBean grade = getGradeByHak(hak);
+		return (grade == null ? null : grade.getName());
+	}
 
 	@Override
 	public int getCount() {
@@ -61,19 +68,13 @@ public class GradeServiceImpl implements GradeService {
 	}
 
 	@Override
-	public int getCountByName(String name) {
-		// 이름조회시 카운트 조회
-		return getGradesByName(name).size();
-	}
-
-	@Override
 	public String update(GradeBean grade) {
 		// 성적표 수정
 		String temp = "";
 		
-//		if (grade.getName() == null) {
-//			temp = "수정 실패";
-//		} else {
+		if (grade.getName() == null) {
+			temp = "존재하지 않는 학번입니다.";
+		} else {
 			GradeBean searchedGrade = getGradeByHak(grade.getHak());
 			searchedGrade.setJava(grade.getJava());
 			searchedGrade.setSql(grade.getSql());
@@ -81,7 +82,7 @@ public class GradeServiceImpl implements GradeService {
 			searchedGrade.setSpring(grade.getSpring());
 			
 			temp = "수정 성공";
-//		}
+		}
 		
 /*		delete(grade.getHak());
 		input(grade);*/

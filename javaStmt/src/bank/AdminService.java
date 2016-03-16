@@ -6,7 +6,7 @@ public interface AdminService {
 	/**
 	 * 계좌 개설
 	 */
-	public String openAccount(String name, int password);
+	public void openAccount(String name, int password);
 	/**
 	 * 전체 계좌 목록 출력
 	 * */
@@ -22,13 +22,9 @@ public interface AdminService {
 	/**
 	 * 계좌 해지
 	 * */
-	public String closeAccount(int accountNo);
+	public boolean closeAccount(int accountNo);
 	/**
 	 * 전체 계좌수 조회
 	 * */
 	public int countAll();
-	/**
-	 * 해당 이름에 맞는 계좌 수 조회
-	 * */
-	public int countByName(String name);
 }

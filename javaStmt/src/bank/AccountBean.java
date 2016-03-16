@@ -50,6 +50,6 @@ public class AccountBean {
 
 	@Override
 	public String toString() {
-		return BANK_NAME + " 한빛통장 [계좌번호=" + accountNo + ", 계좌명=" + name + ", 비밀번호=" + password + ", 잔액=" + money + "]";
+		return BANK_NAME + " 한빛통장 [계좌번호=" + accountNo + ", 계좌명=" + name + ", 비밀번호=" + password + ", 잔액=" + money + "]\n";
 	}
 }

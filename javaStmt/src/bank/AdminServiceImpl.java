@@ -3,7 +3,6 @@ package bank;
 import java.util.Vector;
 
 public class AdminServiceImpl implements AdminService {
-	AccountBean account;
 	Vector<AccountBean> accountList;
 	
 	public AdminServiceImpl() {
@@ -11,12 +10,9 @@ public class AdminServiceImpl implements AdminService {
 	}
 	
 	@Override
-	public String openAccount(String name, int password) {
+	public void openAccount(String name, int password) {
 		// 계좌 개설
-		account = new AccountBean(name, password);
-		accountList.add(account);
-		
-		return account.toString();
+		accountList.add(new AccountBean(name, password));
 	}
 
 	@Override
@@ -52,26 +48,23 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	public String closeAccount(int accountNo) {
+	public boolean closeAccount(int accountNo) {
 		// 계좌 해지
+		boolean result = false;
+		
 		for (int i = 0; i < accountList.size(); i++) {
 			if (accountList.get(i).getAccountNo() == accountNo) {
 				accountList.remove(i);
+				result = true;
 			}
 		}
 		
-		return account.toString();
+		return result;
 	}
 
 	@Override
 	public int countAll() {
 		// 전체 계좌수 조회
 		return accountList.size();
-	}
-
-	@Override
-	public int countByName(String name) {
-		// 해당 이름에 맞는 계좌 수 조회
-		return findAccountsByName(name).size();
 	}
 }

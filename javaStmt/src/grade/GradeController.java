@@ -16,29 +16,17 @@ public class GradeController {
 				service.input(new GradeBean(scanner.nextInt(), scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
 				break;
 			case 2:
-				System.out.print("수정하려는 성적표의 학번, 자바, SQL, JSP, 스프링의 점수를 입력하세요 ");
+				System.out.print("수정하려는 성적표의 학번, 자바, SQL, JSP, 스프링 점수를 입력하세요 ");
 				int hak = scanner.nextInt();
-				GradeBean temp2 = service.getGradeByHak(hak);
-				System.out.println(" >>> " + temp2);
-				
-				if (temp2 == null) {
-					System.out.println("수정 실패");
-				} else {
-					System.out.println(service.update(new GradeBean(hak, temp2.getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
-				}
-				
-//				if (service.getGradeByHak(hak) != null) {
-//					System.out.println(service.update(new GradeBean(hak, service.getGradeByHak(hak).getName(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
-//				} else {
-//					System.out.println("수정 실패");
-//				}
+				String name = service.getNameByHak(hak);
+				System.out.println(service.update(new GradeBean(hak, name, scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt())));
 				break;
 			case 3:
 				System.out.print("학번을 입력하세요 ");
 				System.out.println(service.delete(scanner.nextInt()));
 				break;
 			case 4:
-				System.out.println(service.getList());
+				System.out.println(service.getList().size() == 0 ? "등록된 성적표가 없습니다." : service.getList());
 				break;
 			case 5:
 				System.out.print("이름을 입력하세요 ");
