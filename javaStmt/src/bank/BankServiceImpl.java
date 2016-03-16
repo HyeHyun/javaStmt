@@ -27,7 +27,7 @@ public class BankServiceImpl implements BankService {
 		// 입금
 		account = findAccount(accountNo);
 		String result = "";
-		
+
 		if (account == null) {
 			result = "존재하지 않는 계좌입니다.";
 		} else {
@@ -56,7 +56,7 @@ public class BankServiceImpl implements BankService {
 
 	@Override
 	public AccountBean findAccount(int accountNo) {
-		// 잔액조회
+		// 계좌조회
 		for (int i = 0; i < accountList.size(); i++) {
 			if (accountList.get(i).getAccountNo() == accountNo) {
 				return accountList.get(i);

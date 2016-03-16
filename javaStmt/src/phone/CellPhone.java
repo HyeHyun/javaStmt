@@ -4,6 +4,10 @@ public class CellPhone extends Phone {
 	private boolean portable; // 이동성 존재
 	private String move;
 
+	public CellPhone() {
+		this.setPortable(true);
+	}
+	
 	public boolean isPortable() {
 		return portable;
 	}
@@ -23,5 +27,10 @@ public class CellPhone extends Phone {
 
 	public void setMove(String move) {
 		this.move = move;
+	}
+	
+	@Override
+	public String getCall() {
+		return super.getCall() + " 동시에 "+ this.getMove();
 	}
 }

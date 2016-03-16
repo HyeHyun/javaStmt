@@ -20,7 +20,7 @@ public interface BankService {
 	 * */
 	public String withdraw(int accountNo, int money);
 	/**
-	 * 잔액조회
+	 * 계좌조회
 	 * */
 	public AccountBean findAccount(int accountNo);
 }
