@@ -6,7 +6,9 @@ public class MonthEndDay {
 	String yearStr, result;
 	
 	public void setMonthEndDay(int year, int month) {
-		yearStr = LeapYear.yearStr(year);
+		LeapYear ly = new LeapYear();
+		ly.setYearStr(year);
+		yearStr = ly.getYearStr();
 		
 		switch (month) {
 		case 1:case 3:case 5:case 7:case 8:case 10:case 12:

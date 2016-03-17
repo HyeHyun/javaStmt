@@ -1,7 +1,7 @@
 package switchcase;
 
 import java.util.Scanner;
-import ifelse.LeapYear;
+import ifelse.LeapYearMain;
 
 /**
  * @file : MonthEndDay.java
