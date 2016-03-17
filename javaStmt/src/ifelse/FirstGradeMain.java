@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @date 2016. 3. 11.
  * @story 3명의 학생 점수를 받아서 1등을 출력하는 프로그램
  */
-public class FirstGrade {
+public class FirstGradeMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("3명의 이름과 점수를 입력하세요 ");
