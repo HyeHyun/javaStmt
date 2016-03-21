@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @author KIM HYEHYEON
  * @date 2016. 3. 19.
  * @story 16.최대값, 최소값 구하기
+ * 10개의 수치 자료를 입력 받아 배열에 저장한 후 저장된 자료 중 가장 큰 값을 출력
  */
 public class MaxMin {
 	public static void main(String[] args) {

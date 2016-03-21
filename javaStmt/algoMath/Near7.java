@@ -7,6 +7,8 @@ import java.util.Scanner;
  * @author KIM HYEHYEON
  * @date 2016. 3. 19.
  * @story 18.7에 가장 가까운 수 구하기
+ * 10개의 1자리 양의 정수를 입력 받아 배열에 저장한 후 저장된 자료 중 7에 가장 가까운 값을 찾아 출력
+ * 자료는 1자리 정수이고 근사값이 2개인 경우에는 나중에 찾은 값을 출력
  */
 public class Near7 {
 	public static void main(String[] args) {

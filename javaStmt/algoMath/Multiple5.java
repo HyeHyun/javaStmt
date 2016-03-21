@@ -5,6 +5,7 @@ package algoMath;
  * @author KIM HYEHYEON
  * @date 2016. 3. 19.
  * @story 17.5의 배수의 개수와 합
+ * 1부터 100까지의 수 중 5의 배수의 개수와 합을 출력
  */
 public class Multiple5 {
 	public static void main(String[] args) {

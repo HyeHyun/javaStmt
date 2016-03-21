@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @author KIM HYEHYEON
  * @date 2016. 3. 19.
  * @story 19.보수 구하기
+ * 0 또는 1로 입력되는 다섯 개의 숫자를 배열에 입력받아 1의 보수와 2의 보수를 출력
  */
 public class Complement {
 	public static void main(String[] args) {

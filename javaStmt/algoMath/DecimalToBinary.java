@@ -7,6 +7,7 @@ import java.util.Scanner;
  * @author KIM HYEHYEON
  * @date 2016. 3. 19.
  * @story 13.10진수를 2진수로 변환
+ * 10진수를 입력 받아 2진수로 변환(단, 1000이하의 숫자를 입력받는다.)
  */
 public class DecimalToBinary {
 	public static void main(String[] args) {
