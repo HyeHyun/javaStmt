@@ -9,18 +9,18 @@ package algoMath;
  */
 public class Multiple5 {
 	public static void main(String[] args) {
-		int count = 0, sum = 0, i, mok, nmg;
+		int cnt = 0, sum = 0, i, mok, nmg;
 		
 		for (i = 1; i <= 100; i++) {
 			mok = i/5;
-			nmg = i - (mok * 5);
+			nmg = i - mok * 5;
 			
 			if (nmg == 0) {
-				count++;
-				sum += i;
+				cnt = cnt + 1;
+				sum = sum + i;
 			}
 		}
 		
-		System.out.println("5의 배수의 개수 : " + count + ", 합 : " + sum);
+		System.out.println("5의 배수의 개수 : " + cnt + ", 합 : " + sum);
 	}
 }

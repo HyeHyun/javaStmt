@@ -12,18 +12,21 @@ import java.util.Scanner;
 public class DecimalToBinary {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("십진를 입력하세요 ");
-		int decimal = scanner.nextInt(), i = 0;
-		int[] arr = new int[10];
+		int[] A = new int[10];
+		System.out.print("십진수를 입력하세요 ");
+		int B = scanner.nextInt(), C = 0, mok = B / 2, nmg;		
 
-		while (decimal > 0) {
-			arr[i] = decimal % 2;
-			decimal /= 2;
-			i++;
+		while (mok != 0) {
+			mok = B / 2;
+			nmg = B - mok * 2;
+			A[C] = nmg;
+			C = C + 1;
+			B = mok;
+			System.out.println(nmg);
 		}
 
-		for (i = i - 1; i >= 0; i--) {
-			System.out.print(arr[i]);
+		for (C = C - 1; C >= 0; C--) {
+			System.out.print(A[C]);
 		}
 	}
 }

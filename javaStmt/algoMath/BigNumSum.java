@@ -1,5 +1,7 @@
 package algoMath;
 
+import java.util.Scanner;
+
 /**
  * @file : BigNumSum.java
  * @author KIM HYEHYEON
@@ -12,6 +14,35 @@ package algoMath;
  */
 public class BigNumSum {
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int[] A = new int[5], B = new int[6];
+		int i, j, mok, nmg;
 		
+		System.out.print("숫자를 입력하세요 ");
+		for (i = 0; i < A.length; i++) {
+			A[i] = scanner.nextInt();
+		}
+		
+		while (A[0] != 0) {
+			System.out.println("A[0] : " + A[0]);
+			for (j = 0; j < A.length-2; j++) {
+				B[j+2] = B[j+2] + A[j];
+			}
+			for (i = 0; i < A.length; i++) {
+				A[i] = scanner.nextInt();
+			}
+			
+		}
+/*
+		for (i = B.length; i >= 1; i--) {
+			mok = B[i] / 10;
+			nmg = B[i] - mok * 10;
+			B[i] = nmg;
+			B[i-1] = B[i-1] + mok;
+		}
+		*/
+		for (i = 0; i < B.length; i++) {
+			System.out.print(B[i]+"\t");
+		}
 	}
 }

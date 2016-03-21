@@ -13,28 +13,28 @@ import java.util.Scanner;
 public class Near7 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int i = 0, j = 9, k = 0, l = 0; // j : 차이값 중 최소값, k : 7과 비교대상의 차이값, m : 7과 가장 가까운 값
-		int[] arr = new int[10];
+		int i = 0, J = 9, L = 0, M = 0; // J : 차이값 중 최소값, L : 7과 비교대상의 차이값, m : 7과 가장 가까운 값
+		int[] A = new int[10];
 		
 		System.out.print("한자리수 10개를 입력하세요 ");
-		while (i < arr.length) {
-			arr[i] = scanner.nextInt();
-			i++;
+		while (i < A.length) {
+			A[i] = scanner.nextInt();
+			i = i + 1;
 		}
 		
-		for (i = 0;  i < arr.length; i++) {
-			if (arr[i] > 7) {
-				k = arr[i] - 7;
+		for (i = 0;  i < A.length; i++) {
+			if (A[i] > 7) {
+				L = A[i] - 7;
 			} else {
-				k = 7 - arr[i];
+				L = 7 - A[i];
 			}
 			
-			if (j >= k) {
-				j = k;
-				l = arr[i];
+			if (J >= L) {
+				J = L;
+				M = A[i];
 			}
 		}
 		
-		System.out.println("7과 가장 가까운 값 : " + l);
+		System.out.println("7과 가장 가까운 값 : " + M);
 	}
 }

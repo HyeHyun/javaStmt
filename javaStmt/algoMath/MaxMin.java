@@ -12,18 +12,18 @@ import java.util.Scanner;
 public class MaxMin {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		int[] arr = new int[10];
+		int[] A = new int[10];
 		int i = 0, max = 0;
 		
 		System.out.print("10개의 수를 입력하세요 ");
-		while (i < arr.length) {
-			arr[i] = scanner.nextInt();
-			i++;
+		while (i < A.length) {
+			A[i] = scanner.nextInt();
+			i = i + 1;
 		}
 		
-		for (i = 0; i < arr.length; i++) {
-			if (arr[i] > max) {
-				max = arr[i];
+		for (i = 0; i < A.length; i++) {
+			if (A[i] > max) {
+				max = A[i];
 			}
 		}
 		
