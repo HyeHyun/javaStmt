@@ -17,32 +17,29 @@ public class BigNumSum {
 		Scanner scanner = new Scanner(System.in);
 		int[] A = new int[5], B = new int[6];
 		int i, j, mok, nmg;
-		
-		System.out.print("숫자를 입력하세요 ");
-		for (i = 0; i < A.length; i++) {
-			A[i] = scanner.nextInt();
-		}
-		
-		while (A[0] != 0) {
-			System.out.println("A[0] : " + A[0]);
-			for (j = 0; j < A.length-2; j++) {
-				B[j+2] = B[j+2] + A[j];
-			}
+
+		do {
+			System.out.print("숫자를 입력하세요 ");
 			for (i = 0; i < A.length; i++) {
 				A[i] = scanner.nextInt();
 			}
 			
+			for (i = B.length-1; i > 0; i--) {
+				B[i] = B[i] + A[i-1];
+			}
+			
+		} while (A[0] != 0);
+		
+		for (j = B.length-1; j > 0; j--) {
+			mok = B[j] / 10;
+			nmg = B[j] - mok * 10;
+			B[j] = nmg;
+			B[j-1] = B[j-1] + mok;
 		}
-/*
-		for (i = B.length; i >= 1; i--) {
-			mok = B[i] / 10;
-			nmg = B[i] - mok * 10;
-			B[i] = nmg;
-			B[i-1] = B[i-1] + mok;
-		}
-		*/
-		for (i = 0; i < B.length; i++) {
-			System.out.print(B[i]+"\t");
+		
+		System.out.print("결과 >> ");
+		for (j = 0; j < B.length; j++) {
+			System.out.print(B[j]);
 		}
 	}
 }
